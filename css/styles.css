@@ -1,0 +1,154 @@
+/* styles.css */
+/* ロゴ画像のスタイル */
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+}
+
+/* トップページのスタイル */
+#index-page {
+  margin: 0;
+  padding: 0;
+  background: url('img/bg.jpg') center/cover no-repeat;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  position: relative;
+  font-family: 'Noto Serif JP', serif;
+}
+
+/* ロゴコンテナのスタイル */
+#logo-container {
+    display: flex;
+    justify-content: center; /* 横方向（水平方向）の中央寄せ */
+    align-items: center; /* 縦方向（垂直方向）の中央寄せ */
+    position: absolute;
+    top: 100px;
+    left: 0;
+    width: 100%;
+    height: 300px;
+    z-index: 500; /* ロゴを最前面に表示 */
+}
+
+/* ロゴ画像のスタイル */
+#app-logo {
+    max-width: 100%; /* ロゴがコンテナをはみ出さないようにする */
+    max-height: 100%; /* ロゴがコンテナをはみ出さないようにする */
+}
+
+/* コンテンツのスタイル */
+.content {
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    background-color: rgba(255, 255, 255, 0);
+    text-align: center;
+}
+
+/* アイコンのサイズと色 */
+.icon-font {
+    color:#2E769B;
+    font-size: 36px;
+}
+/* アイコンのスタイル */
+.left-icon {
+    position: fixed;
+    bottom: 20px;
+    left: 20px;
+}
+/* カメラアイコンのスタイル */
+.right-icon {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+}
+/* 再生アイコンのスタイル */
+.center-icon {
+    position: fixed;
+    bottom: 20px;
+    text-align: center;
+}
+
+.caption {
+  color: white;
+}
+  
+/* 地図のスタイル */
+#map {
+    width: 100%;
+    height: 100%;
+}
+
+/* モーダルウィンドウのスタイル */
+.modalScroll,
+.ScrollContent {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.modal {
+    display: none;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000; 
+  }
+  
+  .modal_bg {
+    background: rgba(0, 0, 0, 0.32);
+    height: 100vh;
+    position: absolute;
+    width: 100%;
+  }
+  
+  .js-modal-close {
+    color: #555;
+  }
+  
+  .modalScroll {
+    background:rgba(46, 118, 155, 0.8);
+    height: 380px;
+    width: 380px;
+    max-height: 800px;
+    padding: 10px;
+    border-radius: 20px;
+  }
+  
+  .modal_content {
+    color: rgb(49, 49, 49);
+    text-align: center;
+    text-align: center;
+    padding-top: 10px;
+    padding-bottom: 10px;
+  }
+
+  #youtubePlayer {
+    height: 360px;
+    width: 360px;
+  }
+
+  .spinner {
+    border: 4px solid rgba(255, 255, 255, 0.3);
+    border-radius: 50%;
+    border-top: 4px solid #2E769B;
+    width: 40px;
+    height: 40px;
+    animation: spin 1s linear infinite;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-top: -20px;
+    margin-left: -20px;
+    z-index: 1000;
+    display: none;
+  }
+  
+  @keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+  }
+  

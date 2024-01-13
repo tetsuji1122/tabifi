@@ -1,0 +1,644 @@
+[
+  {
+    "dataset_type": "msds",
+    "apiname": "public_wireless_lan",
+    "organ_code": "010006",
+    "count": 116
+  },
+  {
+    "dataset_type": "msds",
+    "apiname": "public_wireless_lan",
+    "organ_code": "011002",
+    "count": 48
+  },
+  {
+    "dataset_type": "msds",
+    "apiname": "public_wireless_lan",
+    "organ_code": "012220",
+    "count": 62
+  },
+  {
+    "dataset_type": "msds",
+    "apiname": "public_wireless_lan",
+    "organ_code": "020001",
+    "count": 14
+  },
+  {
+    "dataset_type": "msds",
+    "apiname": "public_wireless_lan",
+    "organ_code": "040002",
+    "count": 6
+  },
+  {
+    "dataset_type": "msds",
+    "apiname": "public_wireless_lan",
+    "organ_code": "052094",
+    "count": 16
+  },
+  {
+    "dataset_type": "msds",
+    "apiname": "public_wireless_lan",
+    "organ_code": "062103",
+    "count": 13
+  },
+  {
+    "dataset_type": "msds",
+    "apiname": "public_wireless_lan",
+    "organ_code": "092100",
+    "count": 41
+  },
+  {
+    "dataset_type": "msds",
+    "apiname": "public_wireless_lan",
+    "organ_code": "092134",
+    "count": 12
+  },
+  {
+    "dataset_type": "msds",
+    "apiname": "public_wireless_lan",
+    "organ_code": "122041",
+    "count": 42
+  },
+  {
+    "dataset_type": "msds",
+    "apiname": "public_wireless_lan",
+    "organ_code": "130001",
+    "count": 733
+  },
+  {
+    "dataset_type": "msds",
+    "apiname": "public_wireless_lan",
+    "organ_code": "131032",
+    "count": 132
+  },
+  {
+    "dataset_type": "msds",
+    "apiname": "public_wireless_lan",
+    "organ_code": "131041",
+    "count": 70
+  },
+  {
+    "dataset_type": "msds",
+    "apiname": "public_wireless_lan",
+    "organ_code": "131059",
+    "count": 75
+  },
+  {
+    "dataset_type": "msds",
+    "apiname": "public_wireless_lan",
+    "organ_code": "131105",
+    "count": 15
+  },
+  {
+    "dataset_type": "msds",
+    "apiname": "public_wireless_lan",
+    "organ_code": "131113",
+    "count": 46
+  },
+  {
+    "dataset_type": "msds",
+    "apiname": "public_wireless_lan",
+    "organ_code": "131172",
+    "count": 2
+  },
+  {
+    "dataset_type": "msds",
+    "apiname": "public_wireless_lan",
+    "organ_code": "131202",
+    "count": 45
+  },
+  {
+    "dataset_type": "msds",
+    "apiname": "public_wireless_lan",
+    "organ_code": "131229",
+    "count": 34
+  },
+  {
+    "dataset_type": "msds",
+    "apiname": "public_wireless_lan",
+    "organ_code": "132047",
+    "count": 8
+  },
+  {
+    "dataset_type": "msds",
+    "apiname": "public_wireless_lan",
+    "organ_code": "132098",
+    "count": 16
+  },
+  {
+    "dataset_type": "msds",
+    "apiname": "public_wireless_lan",
+    "organ_code": "162019",
+    "count": 20
+  },
+  {
+    "dataset_type": "msds",
+    "apiname": "public_wireless_lan",
+    "organ_code": "172065",
+    "count": 214
+  },
+  {
+    "dataset_type": "msds",
+    "apiname": "public_wireless_lan",
+    "organ_code": "182079",
+    "count": 36
+  },
+  {
+    "dataset_type": "msds",
+    "apiname": "public_wireless_lan",
+    "organ_code": "183822",
+    "count": 2
+  },
+  {
+    "dataset_type": "msds",
+    "apiname": "public_wireless_lan",
+    "organ_code": "200000",
+    "count": 14
+  },
+  {
+    "dataset_type": "msds",
+    "apiname": "public_wireless_lan",
+    "organ_code": "202142",
+    "count": 35
+  },
+  {
+    "dataset_type": "msds",
+    "apiname": "public_wireless_lan",
+    "organ_code": "220001",
+    "count": 296
+  },
+  {
+    "dataset_type": "msds",
+    "apiname": "public_wireless_lan",
+    "organ_code": "221007",
+    "count": 26
+  },
+  {
+    "dataset_type": "msds",
+    "apiname": "public_wireless_lan",
+    "organ_code": "222038",
+    "count": 10
+  },
+  {
+    "dataset_type": "msds",
+    "apiname": "public_wireless_lan",
+    "organ_code": "222054",
+    "count": 11
+  },
+  {
+    "dataset_type": "msds",
+    "apiname": "public_wireless_lan",
+    "organ_code": "222071",
+    "count": 20
+  },
+  {
+    "dataset_type": "msds",
+    "apiname": "public_wireless_lan",
+    "organ_code": "222089",
+    "count": 2
+  },
+  {
+    "dataset_type": "msds",
+    "apiname": "public_wireless_lan",
+    "organ_code": "222101",
+    "count": 16
+  },
+  {
+    "dataset_type": "msds",
+    "apiname": "public_wireless_lan",
+    "organ_code": "222127",
+    "count": 18
+  },
+  {
+    "dataset_type": "msds",
+    "apiname": "public_wireless_lan",
+    "organ_code": "222208",
+    "count": 5
+  },
+  {
+    "dataset_type": "msds",
+    "apiname": "public_wireless_lan",
+    "organ_code": "222241",
+    "count": 20
+  },
+  {
+    "dataset_type": "msds",
+    "apiname": "public_wireless_lan",
+    "organ_code": "223069",
+    "count": 16
+  },
+  {
+    "dataset_type": "msds",
+    "apiname": "public_wireless_lan",
+    "organ_code": "224618",
+    "count": 19
+  },
+  {
+    "dataset_type": "msds",
+    "apiname": "public_wireless_lan",
+    "organ_code": "242128",
+    "count": 10
+  },
+  {
+    "dataset_type": "msds",
+    "apiname": "public_wireless_lan",
+    "organ_code": "250007",
+    "count": 1195
+  },
+  {
+    "dataset_type": "msds",
+    "apiname": "public_wireless_lan",
+    "organ_code": "252018",
+    "count": 236
+  },
+  {
+    "dataset_type": "msds",
+    "apiname": "public_wireless_lan",
+    "organ_code": "252026",
+    "count": 31
+  },
+  {
+    "dataset_type": "msds",
+    "apiname": "public_wireless_lan",
+    "organ_code": "252034",
+    "count": 21
+  },
+  {
+    "dataset_type": "msds",
+    "apiname": "public_wireless_lan",
+    "organ_code": "252042",
+    "count": 57
+  },
+  {
+    "dataset_type": "msds",
+    "apiname": "public_wireless_lan",
+    "organ_code": "252093",
+    "count": 91
+  },
+  {
+    "dataset_type": "msds",
+    "apiname": "public_wireless_lan",
+    "organ_code": "252123",
+    "count": 6
+  },
+  {
+    "dataset_type": "msds",
+    "apiname": "public_wireless_lan",
+    "organ_code": "262021",
+    "count": 8
+  },
+  {
+    "dataset_type": "msds",
+    "apiname": "public_wireless_lan",
+    "organ_code": "262145",
+    "count": 48
+  },
+  {
+    "dataset_type": "msds",
+    "apiname": "public_wireless_lan",
+    "organ_code": "263672",
+    "count": 9
+  },
+  {
+    "dataset_type": "msds",
+    "apiname": "public_wireless_lan",
+    "organ_code": "270008",
+    "count": 3284
+  },
+  {
+    "dataset_type": "msds",
+    "apiname": "public_wireless_lan",
+    "organ_code": "271403",
+    "count": 49
+  },
+  {
+    "dataset_type": "msds",
+    "apiname": "public_wireless_lan",
+    "organ_code": "272086",
+    "count": 1
+  },
+  {
+    "dataset_type": "msds",
+    "apiname": "public_wireless_lan",
+    "organ_code": "272159",
+    "count": 2
+  },
+  {
+    "dataset_type": "msds",
+    "apiname": "public_wireless_lan",
+    "organ_code": "272175",
+    "count": 1
+  },
+  {
+    "dataset_type": "msds",
+    "apiname": "public_wireless_lan",
+    "organ_code": "272183",
+    "count": 9
+  },
+  {
+    "dataset_type": "msds",
+    "apiname": "public_wireless_lan",
+    "organ_code": "282014",
+    "count": 13
+  },
+  {
+    "dataset_type": "msds",
+    "apiname": "public_wireless_lan",
+    "organ_code": "282103",
+    "count": 27
+  },
+  {
+    "dataset_type": "msds",
+    "apiname": "public_wireless_lan",
+    "organ_code": "282227",
+    "count": 10
+  },
+  {
+    "dataset_type": "msds",
+    "apiname": "public_wireless_lan",
+    "organ_code": "302015",
+    "count": 23
+  },
+  {
+    "dataset_type": "msds",
+    "apiname": "public_wireless_lan",
+    "organ_code": "310000",
+    "count": 72
+  },
+  {
+    "dataset_type": "msds",
+    "apiname": "public_wireless_lan",
+    "organ_code": "330001",
+    "count": 88
+  },
+  {
+    "dataset_type": "msds",
+    "apiname": "public_wireless_lan",
+    "organ_code": "340006",
+    "count": 76
+  },
+  {
+    "dataset_type": "msds",
+    "apiname": "public_wireless_lan",
+    "organ_code": "350001",
+    "count": 835
+  },
+  {
+    "dataset_type": "msds",
+    "apiname": "public_wireless_lan",
+    "organ_code": "352128",
+    "count": 6
+  },
+  {
+    "dataset_type": "msds",
+    "apiname": "public_wireless_lan",
+    "organ_code": "352136",
+    "count": 72
+  },
+  {
+    "dataset_type": "msds",
+    "apiname": "public_wireless_lan",
+    "organ_code": "353051",
+    "count": 16
+  },
+  {
+    "dataset_type": "msds",
+    "apiname": "public_wireless_lan",
+    "organ_code": "353418",
+    "count": 1
+  },
+  {
+    "dataset_type": "msds",
+    "apiname": "public_wireless_lan",
+    "organ_code": "360007",
+    "count": 15
+  },
+  {
+    "dataset_type": "msds",
+    "apiname": "public_wireless_lan",
+    "organ_code": "370002",
+    "count": 965
+  },
+  {
+    "dataset_type": "msds",
+    "apiname": "public_wireless_lan",
+    "organ_code": "383864",
+    "count": 11
+  },
+  {
+    "dataset_type": "msds",
+    "apiname": "public_wireless_lan",
+    "organ_code": "401005",
+    "count": 183
+  },
+  {
+    "dataset_type": "msds",
+    "apiname": "public_wireless_lan",
+    "organ_code": "401307",
+    "count": 114
+  },
+  {
+    "dataset_type": "msds",
+    "apiname": "public_wireless_lan",
+    "organ_code": "402052",
+    "count": 18
+  },
+  {
+    "dataset_type": "msds",
+    "apiname": "public_wireless_lan",
+    "organ_code": "402184",
+    "count": 1
+  },
+  {
+    "dataset_type": "msds",
+    "apiname": "public_wireless_lan",
+    "organ_code": "402192",
+    "count": 51
+  },
+  {
+    "dataset_type": "msds",
+    "apiname": "public_wireless_lan",
+    "organ_code": "402206",
+    "count": 15
+  },
+  {
+    "dataset_type": "msds",
+    "apiname": "public_wireless_lan",
+    "organ_code": "402214",
+    "count": 13
+  },
+  {
+    "dataset_type": "msds",
+    "apiname": "public_wireless_lan",
+    "organ_code": "402231",
+    "count": 7
+  },
+  {
+    "dataset_type": "msds",
+    "apiname": "public_wireless_lan",
+    "organ_code": "402265",
+    "count": 9
+  },
+  {
+    "dataset_type": "msds",
+    "apiname": "public_wireless_lan",
+    "organ_code": "403431",
+    "count": 14
+  },
+  {
+    "dataset_type": "msds",
+    "apiname": "public_wireless_lan",
+    "organ_code": "403491",
+    "count": 7
+  },
+  {
+    "dataset_type": "msds",
+    "apiname": "public_wireless_lan",
+    "organ_code": "403814",
+    "count": 7
+  },
+  {
+    "dataset_type": "msds",
+    "apiname": "public_wireless_lan",
+    "organ_code": "412040",
+    "count": 22
+  },
+  {
+    "dataset_type": "msds",
+    "apiname": "public_wireless_lan",
+    "organ_code": "412082",
+    "count": 5
+  },
+  {
+    "dataset_type": "msds",
+    "apiname": "public_wireless_lan",
+    "organ_code": "422011",
+    "count": 79
+  },
+  {
+    "dataset_type": "msds",
+    "apiname": "public_wireless_lan",
+    "organ_code": "422037",
+    "count": 20
+  },
+  {
+    "dataset_type": "msds",
+    "apiname": "public_wireless_lan",
+    "organ_code": "422053",
+    "count": 16
+  },
+  {
+    "dataset_type": "msds",
+    "apiname": "public_wireless_lan",
+    "organ_code": "422096",
+    "count": 43
+  },
+  {
+    "dataset_type": "msds",
+    "apiname": "public_wireless_lan",
+    "organ_code": "422118",
+    "count": 27
+  },
+  {
+    "dataset_type": "msds",
+    "apiname": "public_wireless_lan",
+    "organ_code": "423084",
+    "count": 2
+  },
+  {
+    "dataset_type": "msds",
+    "apiname": "public_wireless_lan",
+    "organ_code": "432130",
+    "count": 17
+  },
+  {
+    "dataset_type": "msds",
+    "apiname": "public_wireless_lan",
+    "organ_code": "432148",
+    "count": 12
+  },
+  {
+    "dataset_type": "msds",
+    "apiname": "public_wireless_lan",
+    "organ_code": "434434",
+    "count": 10
+  },
+  {
+    "dataset_type": "msds",
+    "apiname": "public_wireless_lan",
+    "organ_code": "440001",
+    "count": 545
+  },
+  {
+    "dataset_type": "msds",
+    "apiname": "public_wireless_lan",
+    "organ_code": "442119",
+    "count": 31
+  },
+  {
+    "dataset_type": "msds",
+    "apiname": "public_wireless_lan",
+    "organ_code": "442135",
+    "count": 10
+  },
+  {
+    "dataset_type": "msds",
+    "apiname": "public_wireless_lan",
+    "organ_code": "452068",
+    "count": 13
+  },
+  {
+    "dataset_type": "msds",
+    "apiname": "public_wireless_lan",
+    "organ_code": "452076",
+    "count": 14
+  },
+  {
+    "dataset_type": "msds",
+    "apiname": "public_wireless_lan",
+    "organ_code": "462039",
+    "count": 37
+  },
+  {
+    "dataset_type": "msds",
+    "apiname": "public_wireless_lan",
+    "organ_code": "462217",
+    "count": 19
+  },
+  {
+    "dataset_type": "msds",
+    "apiname": "public_wireless_lan",
+    "organ_code": "462225",
+    "count": 10
+  },
+  {
+    "dataset_type": "msds",
+    "apiname": "public_wireless_lan",
+    "organ_code": "464929",
+    "count": 29
+  },
+  {
+    "dataset_type": "msds",
+    "apiname": "public_wireless_lan",
+    "organ_code": "465020",
+    "count": 20
+  },
+  {
+    "dataset_type": "msds",
+    "apiname": "public_wireless_lan",
+    "organ_code": "470007",
+    "count": 2877
+  },
+  {
+    "dataset_type": "msds",
+    "apiname": "public_wireless_lan",
+    "organ_code": "473243",
+    "count": 6
+  },
+  {
+    "dataset_type": "msds",
+    "apiname": "public_wireless_lan",
+    "organ_code": "473570",
+    "count": 2
+  }
+]
