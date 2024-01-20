@@ -13,8 +13,10 @@
         //右ペイン
         const $$list = document.createElement('div');
         $$list.className = 'list';
+        $$list.id = 'list';
         document.body.appendChild($$list);
 
+        //ボタンおきば
         const $$nav = document.createElement('div');
         $$nav.className = 'nav';
         $$list.appendChild($$nav);
@@ -24,66 +26,46 @@
         $$allSearch.appendChild(document.createTextNode('周辺情報検索'));
         $$allSearch.className = 'all-search';
 
-
         $$allSearch.onclick = async () => {
             $$list.innerHTML = '';
 
             const items = await search(2000, window.nowItem.lat, window.nowItem.lng);
-            const $$title = document.createElement('h5');
-            $$title.innerHTML = `文化財一覧`;
-            $$list.appendChild($$title);
-            for (let item of items) {
-                const $$row = document.createElement('div');
-                const $$a = document.createElement('a');
-                $$row.appendChild($$a);
-                $$list.appendChild($$row);
-                $$a.innerHTML = `${item.name}`
+            await renderList("文化財一覧", items, $$list);
 
-
-                let marker = null;
-                $$a.onclick = async (e) => {
-                    e.preventDefault();
-
-                    if (null == marker) {
-                        marker = await onListItemClick(item);
-                    } else {
-                        marker.popper.openPopup();
-                    }
-                }
-                $$a.href = ''
-
-            }
             const cItems = await searchCulturalProperty(2000, window.nowItem.lat, window.nowItem.lng);
-            const $$cTitle = document.createElement('h5');
-            $$cTitle.innerHTML = `観光施設一覧`;
-            $$list.appendChild($$cTitle);
-            for (let item of cItems) {
-                const $$row = document.createElement('div');
-                const $$a = document.createElement('a');
-                $$row.appendChild($$a);
-                $$list.appendChild($$row);
-                $$a.innerHTML = `${item.name}`
-
-                let marker = null;
-                $$a.onclick = async (e) => {
-                    e.preventDefault();
-
-                    if (null == marker) {
-                        marker = await onListItemClick(item);
-                    } else {
-                        marker.popper.openPopup();
-                    }
-
-                }
-                $$a.href = ''
-
-            }
+            await renderList('観光施設一覧', cItems, $$list);
 
             $$list.appendChild($$nav);
-
-
         }
 
+    }
+
+    async function renderList(title, items, $$list) {
+
+        const $$title = document.createElement('h5');
+        $$title.innerHTML = title;
+        $$list.appendChild($$title);
+
+        for (let item of items) {
+            const $$row = document.createElement('div');
+            const $$a = document.createElement('a');
+            $$row.appendChild($$a);
+            $$list.appendChild($$row);
+            $$a.innerHTML = `${item.name}`
+
+            let marker = null;
+            $$a.onclick = async (e) => {
+                e.preventDefault();
+
+                if (null == marker) {
+                    marker = await renderItem(item);
+                } else {
+                    marker.popper.openPopup();
+                }
+            }
+            $$a.href = ''
+
+        }
     }
 
 
@@ -92,9 +74,10 @@
      * @param {{
      *  name: string;
      *  description : string;
+     *  address : string;
      * }} item 
      */
-    async function onListItemClick(item) {
+    async function renderItem(item) {
 
         console.log(item);
 
@@ -107,7 +90,7 @@
 
         console.log({ lat, lng })
 
-        if(null == lat){
+        if (null == lat) {
             alert('がんばりましたが\n位置情報が取得できませんでした。');
             return null;
         }
