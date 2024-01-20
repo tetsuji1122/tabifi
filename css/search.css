@@ -8,3 +8,10 @@
     background-color: antiquewhite;
 
 }
+
+.tour-search {
+    position: fixed;
+    bottom : 1rem;
+    right: 1rem;
+    
+}
