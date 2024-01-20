@@ -15,31 +15,74 @@
         $$list.className = 'list';
         document.body.appendChild($$list);
 
-        const $$button = document.createElement('button');
-        $$list.appendChild($$button);
-        $$button.appendChild(document.createTextNode('観光施設検索'));
-        $$button.className = 'tour-search';
+        const $$nav = document.createElement('div');
+        $$nav.className = 'nav';
+        $$list.appendChild($$nav);
+
+        const $$allSearch = document.createElement('button');
+        $$nav.appendChild($$allSearch);
+        $$allSearch.appendChild(document.createTextNode('周辺情報検索'));
+        $$allSearch.className = 'all-search';
 
 
-        $$button.onclick = async () => {
-            const items = await search(2000, window.nowItem.lat, window.nowItem.lng);
-
+        $$allSearch.onclick = async () => {
             $$list.innerHTML = '';
 
+            const items = await search(2000, window.nowItem.lat, window.nowItem.lng);
+            const $$title = document.createElement('h5');
+            $$title.innerHTML = `文化財一覧`;
+            $$list.appendChild($$title);
             for (let item of items) {
                 const $$row = document.createElement('div');
                 const $$a = document.createElement('a');
                 $$row.appendChild($$a);
                 $$list.appendChild($$row);
                 $$a.innerHTML = `${item.name}`
-                $$a.onclick = (e) => {
+
+
+                let marker = null;
+                $$a.onclick = async (e) => {
                     e.preventDefault();
-                    onListItemClick(item);
+
+                    if (null == marker) {
+                        marker = await onListItemClick(item);
+                    } else {
+                        marker.popper.openPopup();
+                    }
                 }
                 $$a.href = ''
+
+            }
+            const cItems = await searchCulturalProperty(2000, window.nowItem.lat, window.nowItem.lng);
+            const $$cTitle = document.createElement('h5');
+            $$cTitle.innerHTML = `観光施設一覧`;
+            $$list.appendChild($$cTitle);
+            for (let item of cItems) {
+                const $$row = document.createElement('div');
+                const $$a = document.createElement('a');
+                $$row.appendChild($$a);
+                $$list.appendChild($$row);
+                $$a.innerHTML = `${item.name}`
+
+                let marker = null;
+                $$a.onclick = async (e) => {
+                    e.preventDefault();
+
+                    if (null == marker) {
+                        marker = await onListItemClick(item);
+                    } else {
+                        marker.popper.openPopup();
+                    }
+
+                }
+                $$a.href = ''
+
             }
 
-        };
+            $$list.appendChild($$nav);
+
+
+        }
 
     }
 
@@ -55,35 +98,53 @@
 
         console.log(item);
 
-        const { lat, lng } = await new Promise((res) => getLatLng(item.address, (item) => res(item)));
+        const { lat, lng } = await new Promise((res, rej) => getLatLng(item.address, (item) => res(item), (error) => {
 
-        pinMap(window.map, { ...item, lat, lng }, point)
+            console.error(error);
+            alert('がんばりましたが\n位置情報が取得できませんでした。')
+            rej(error)
+        }));
+
+        console.log({ lat, lng })
+
+        if(null == lat){
+            alert('がんばりましたが\n位置情報が取得できませんでした。');
+            return null;
+        }
+
+        const { marker, popper } = pinMap(window.map, { ...item, lat, lng }, point)
+
+
+        return { m: marker, popper };
 
     }
 
     function popItem(item) {
-        return `
+        const content = `
     <div>
         <div><strong>${item.name}</strong></div>
         <div>${item.description}</div>
     </div>
-    `
-            ;
+    `;
+
+        console.log(content)
+
+        return content;
     }
 
     function pinMap(map, item, icon) {
         const marker = L.marker([item.lat, item.lng], { icon }).addTo(map);
 
-        marker.bindPopup(popItem(item));
+        const popper = marker.bindPopup(popItem(item));
 
         marker.item = item;
 
+        return { marker, popper };
+
     }
 
-
-    async function search(distacne, lat, lon) {
-        const url = `https://wapi.bodik.jp/tourism`;
-
+    async function searchCulturalProperty(distacne, lat, lon) {
+        const url = `https://wapi.bodik.jp/cultural_property`;
         const params = new URLSearchParams({
             distacne, maxResults: 20, select_type: 'data', lat, lon
         });
@@ -94,17 +155,34 @@
 
         const nextDist = distacne * 5; //meter;
 
-        if (json.metadata.totalCount == 0) {
-            if (nextDist > 100 * 1000) {
-                alert('近くに観光施設がありません。');
-                return [];
-            }
-
-            return await search(nextDist, lat, lon)
+        if (0 < json.metadata.totalCount) {
+            return json.resultsets.features.map(item => item.properties);
         }
+
+        if (nextDist > 100 * 1000) {
+            return await searchTownCulturalProperty(window.nowItem.pref, window.nowItem.city);
+        }
+        return searchCulturalProperty(nextDist, lat, lon)
+
+    }
+    async function searchTownCulturalProperty(pref, city) {
+        const url = `https://wapi.bodik.jp/cultural_property`;
+
+        const params = new URLSearchParams({
+            maxResults: 20, select_type: 'data', prefectureName: pref, /* cityName: city */
+        });
+
+        const resp = await fetch(`${url}?${params.toString()}`);
+
+        const json = await resp.json();
+
+        if (json.metadata.totalCount == 0) {
+            alert('近くに観光施設がありません。');
+            return [];
+        }
+
         return json.resultsets.features.map(item => item.properties);
     }
-
     async function search(distacne, lat, lon) {
         const url = `https://wapi.bodik.jp/tourism`;
 
