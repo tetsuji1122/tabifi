@@ -11,44 +11,50 @@
 
     function main() {
         //右ペイン
-        const $$list = document.createElement('div');
-        $$list.className = 'list';
-        $$list.id = 'list';
-        document.body.appendChild($$list);
+        //const $$list = document.createElement('div');
+        // $$list.className = 'list';
+        // $$list.id = 'list';
+        // document.body.appendChild($$list);
+        const $$list = document.getElementById('searchlist');
 
         //ボタンおきば
-        const $$nav = document.createElement('div');
-        $$nav.className = 'nav';
-        $$list.appendChild($$nav);
+        // const $$nav = document.createElement('div');
+        // $$nav.className = 'nav';
+        // $$list.appendChild($$nav);
 
-        const $$allSearch = document.createElement('button');
-        $$nav.appendChild($$allSearch);
-        $$allSearch.appendChild(document.createTextNode('周辺情報検索'));
-        $$allSearch.className = 'all-search';
+        const $$allSearch = document.getElementById('searchbtn');
+        //$$nav.appendChild($$allSearch);
+        //$$allSearch.appendChild(document.createTextNode('周辺情報検索'));
+        //$$allSearch.className = 'all-search';
 
         $$allSearch.onclick = async () => {
+            if (window.nowItem.items && window.nowItem.cItems) return;//すでに取得した場合は処理しない
             $$list.innerHTML = '';
 
             const items = await search(2000, window.nowItem.lat, window.nowItem.lng);
-            await renderList("文化財一覧", items, $$list);
+            window.nowItem.items = items;
+            await renderList("観光施設", items, $$list);
 
             const cItems = await searchCulturalProperty(2000, window.nowItem.lat, window.nowItem.lng);
-            await renderList('観光施設一覧', cItems, $$list);
+            window.nowItem.cItems = cItems;
+            await renderList('文化財', cItems, $$list);
 
-            $$list.appendChild($$nav);
+            //$$list.appendChild($$nav);
         }
 
     }
 
     async function renderList(title, items, $$list) {
 
-        const $$title = document.createElement('h5');
+        const $$title = document.createElement('h6');
         $$title.innerHTML = title;
+        $$title.className = "dropdown-header";
         $$list.appendChild($$title);
 
         for (let item of items) {
             const $$row = document.createElement('div');
             const $$a = document.createElement('a');
+            $$a.className="dropdown-item";
             $$row.appendChild($$a);
             $$list.appendChild($$row);
             $$a.innerHTML = `${item.name}`
@@ -160,7 +166,7 @@
         const json = await resp.json();
 
         if (json.metadata.totalCount == 0) {
-            alert('近くに観光施設がありません。');
+            //alert('近くに観光施設がありません。');
             return [];
         }
 
@@ -202,7 +208,7 @@
         const json = await resp.json();
 
         if (json.metadata.totalCount == 0) {
-            alert('近くに観光施設がありません。');
+            //alert('近くに観光施設がありません。');
             return [];
         }
 

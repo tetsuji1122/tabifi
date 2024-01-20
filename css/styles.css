@@ -18,7 +18,13 @@ body, html {
   position: relative;
   font-family: 'Noto Serif JP', serif;
 }
-
+/* ロゴコンテナのスタイル */
+#dropdown-container {
+  position: fixed;
+  top: 10px;
+  left: 10px;
+  z-index: 1; /* ロゴを最前面に表示 */
+}
 /* ロゴコンテナのスタイル */
 #logo-container {
     display: flex;
@@ -31,6 +37,8 @@ body, html {
     height: 300px;
     z-index: 500; /* ロゴを最前面に表示 */
 }
+
+
 
 /* ロゴ画像のスタイル */
 #app-logo {

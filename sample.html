@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+  <style>
+    /* 地図のスタイル（例） */
+    #map {
+      width: 100%;
+      height: 400px;
+      background-color: lightgray;
+    }
+
+    /* ドロップダウンボタンを地図の上に浮かせるスタイル */
+    .dropdown-container {
+      position: absolute;
+      top: 10px; /* 上からの位置調整 */
+      right: 10px; /* 右からの位置調整 */
+      z-index: 1000; /* 地図よりも上に表示するためのz-index */
+    }
+  </style>
+  <title>Dropdown Button on Map</title>
+</head>
+<body>
+
+<div class="container mt-4">
+  <!-- 地図エリア -->
+  <div id="map"></div>
+  
+  <!-- ドロップダウンボタン -->
+  <div class="dropdown-container">
+    <div class="btn-group">
+      <button type="button" class="btn btn-secondary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+        Actions
+      </button>
+      <div class="dropdown-menu">
+        <a class="dropdown-item" href="#">Action 1</a>
+        <a class="dropdown-item" href="#">Action 2</a>
+        <a class="dropdown-item" href="#">Action 3</a>
+        <!-- メニューアイテムを追加 -->
+        <!-- ... -->
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Bootstrap JS (optional) -->
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+
+<!-- 地図用のライブラリやスクリプト（例） -->
+<!-- ... -->
+
+</body>
+</html>

@@ -4,10 +4,9 @@
     right: 0px;
     height: 100vh;
     width: 20%;
-    z-index: 9000;
+    z-index: 800;
     background-color: antiquewhite;
     overflow: auto;
-
 }
 
 .list>h5{
@@ -22,3 +21,18 @@
 .nav>*{
     margin: 0.25rem;
 }
+
+    /* ドロップダウンボタンを地図の上に浮かせるスタイル */
+    .dropdown-container {
+        position: absolute;
+        bottom: 30px; /* 上からの位置調整 */
+        right: 10px; /* 右からの位置調整 */
+        z-index: 1000; /* 地図よりも上に表示するためのz-index */
+      }
+      .scrollable-dropdown {
+        height: 400px;
+        width: 300px;
+        max-height: 400px; /* ドロップダウンメニューの最大の高さを指定 */
+        overflow-y: auto; /* 縦方向のスクロールバーを表示 */
+      }
+  
