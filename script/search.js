@@ -45,6 +45,7 @@
     }
 
     async function renderList(title, items, $$list) {
+        if (items.length == 0) return;
 
         const $$title = document.createElement('h6');
         $$title.innerHTML = title;
