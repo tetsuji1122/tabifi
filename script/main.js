@@ -117,6 +117,9 @@ function setPinOfWiFi() {
         loadend();
 
         window.nowItem = item;
+    }, (error) => {
+        console.log("住所情報から位置情報が特定できませんでした。再度検索します。");
+        findWiFi();
     });
 }
 
