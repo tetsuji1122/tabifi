@@ -115,6 +115,8 @@ function setPinOfWiFi() {
         //地図の中心を変更する
         map.setView([item.lat, item.lng],9);
         loadend();
+
+        window.nowItem = item;
     });
 }
 
